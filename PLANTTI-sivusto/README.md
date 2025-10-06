@@ -1,2 +1,0 @@
-# SanniPaivarinta.github.io
-Sivustoryhmätyö
