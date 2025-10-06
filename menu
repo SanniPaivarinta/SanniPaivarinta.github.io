@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>PLANTTI – Menu</title>
+    <style>
+        body {
+            background-color: #FFF7DC;
+            color: #000000;
+            font-family: 'Baskerville Old Face', serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Monotype Corsiva', cursive;
+            font-weight: bold;
+            color: #186A47;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-bottom: 1px solid #C6C3AB;
+        }
+
+        .menu-item {
+            margin-bottom: 25px;
+        }
+
+        .menu-title {
+            font-family: 'Monotype Corsiva', cursive;
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #186A47;
+        }
+
+        .menu-description {
+            font-family: 'Baskerville Old Face', serif;
+            font-size: 1em;
+            color: #000000;
+            margin-top: 5px;
+        }
+
+        .price {
+            float: right;
+            font-weight: bold;
+        }
+
+        img.menu-img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #639974;
+            color: #FFF7DC;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PLANTTI</h1>
+    <h2>Vastuullinen valinta – Menu</h2>
+
+    <div class="section" id="aamu">
+        <h3>🥐 Aamu / Brunssi</h3>
+
+        <div class="menu-item">
+            <span class="menu-title">Avokado-chili Toast</span><span class="price">9,90 €</span>
+            <div class="menu-description">Hapanjuurileivällä, limen mehulla maustettu smashed avocado, chilihiutaleet, seesaminsiemenet & idut.</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Tofuskramble & Sweet Potato Bowl</span><span class="price">12,90 €</span>
+            <div class="menu-description">Maustettua tofukokkelia, paahdettuja bataattilohkoja, pinaattia, kikherneitä & kurkumajogurttia.</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Matcha Chia Parfait</span><span class="price">8,50 €</span>
+            <div class="menu-description">Matcha-vanilja chia-vanukasta, tuoreita marjoja, granolaa & kookoskermaa.</div>
+        </div>
+
+        <img src="kuvat/aamiaiset.jpg" alt="Aamiaisannos" class="menu-img">
+    </div>
+
+    <div class="section" id="lampimat">
+        <h3>🥗 Lämpimät Annokset</h3>
+
+        <div class="menu-item">
+            <span class="menu-title">BBQ Jackfruit Burger</span><span class="price">16,90 €</span>
+            <div class="menu-description">Hitaasti haudutettu bbq-jackfruit, vegaaninen aioli, pikkelöity punasipuli, rapea salaatti & briossisämpylä. Tarjoillaan bataattiranskalaisten kanssa.</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Vietnamilainen Nuudelisalaatti</span><span class="price">14,90 €</span>
+            <div class="menu-description">Riisinuudeleita, paistettua tempehiä, kurkkua, porkkanaa, yrttejä, limettiä ja maapähkinäkastiketta.</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Sienirisotto (sesonki)</span><span class="price">17,50 €</span>
+            <div class="menu-description">Paistettuja metsäsieniä, valkoviiniä, cashew-parmesaania & tuoretta timjamia.</div>
+        </div>
+
+        <img src="kuvat/lampimat.jpg" alt="Lämmin annos" class="menu-img">
+    </div>
+
+    <div class="section" id="makeat">
+        <h3>🧁 Makeat</h3>
+
+        <div class="menu-item">
+            <span class="menu-title">Raakakakku – päivän maku</span><span class="price">6,90 €</span>
+            <div class="menu-description">Esim. mustikka-lakritsi / suklaa-hasselpähkinä / passion-vanilja.</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Kanelibulli (vegaaninen)</span><span class="price">4,50 €</span>
+            <div class="menu-description">Käsintehty pehmeä pulla, täytetty kardemummalla & kanelilla.</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Suklaa-tahinicookie</span><span class="price">3,90 €</span>
+            <div class="menu-description">Iso, tahmea ja täydellisen suolainen. Lisänä merisuolahiutaleita.</div>
+        </div>
+
+        <img src="kuvat/makeat.jpg" alt="Jälkiruoka" class="menu-img">
+    </div>
+
+    <div class="section" id="juomat">
+        <h3>🧃 Juomat</h3>
+
+        <div class="menu-item">
+            <span class="menu-title">Tuorepuristetut mehut</span><span class="price">5,90 €</span>
+            <div class="menu-description">Vihreä: omena–kurkku–inkivääri–lehtikaali<br>Pirteä: appelsiini–porkkana–sitruuna–kurkuma</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Barista-kahvit (kauramaito)</span>
+            <div class="menu-description">Espresso – 2,80 €<br>Latte – 4,20 €<br>Iced Oat Latte – 4,90 €</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Matcha latte / Kurkuma latte</span><span class="price">4,90 €</span>
+            <div class="menu-description">Valmistettu gluteenittomaan kauramaitoon.</div>
+        </div>
+
+        <div class="menu-item">
+            <span class="menu-title">Kombucha (luomu)</span><span class="price">5,50 €</span>
+            <div class="menu-description">Päivän maku (esim. inkivääri-sitruuna / vadelma-minttu)</div>
+        </div>
+
+        <img src="kuvat/juomat.jpg" alt="Juomat" class="menu-img">
+    </div>
+
+   <div class="section" id="info">
+    <h3>💚 Erityisruokavaliot & Muuta</h3>
+
+    <ul class="menu-description">
+        <li>Kaikki annokset ovat 100 % vegaanisia</li>
+        <li>Useita gluteenittomia ja pähkinättömiä vaihtoehtoja</li>
+        <li>Ruoat saatavilla mukaan (kestorasioissa)</li>
+        <li>Käytämme kotimaisia ja luomutuotteita aina kun mahdollista</li>
+    </ul>
+</div>
