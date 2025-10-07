@@ -188,15 +188,4 @@ footer a img {
         margin: 16px auto 0 auto;
         text-align: center;
     }
-
-    :root {
-        --footer-height: 56px;
-        --footer-offset: 8px;
-        --footer-margin: 12px;
-    }
-
-    footer {
-        padding: 10px 14px;
-        border-radius: 10px;
-    }
 }
