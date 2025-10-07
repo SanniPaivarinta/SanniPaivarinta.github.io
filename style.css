@@ -143,7 +143,7 @@ footer a img {
     }
 
     .menu-toggle {
-        display: none; /* No hamburger menu */
+        display: none;
     }
 
     .mobile-nav {
