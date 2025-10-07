@@ -143,34 +143,35 @@ footer a img {
     }
 
     .menu-toggle {
-        display: block;
+        display: none; /* No hamburger menu needed */
     }
 
     .mobile-nav {
-        display: none;
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
         width: 100%;
     }
 
-    .mobile-nav.active {
-        display: flex;
-    }
-
     nav ul {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         gap: 8px;
         padding: 0;
         margin: 0;
+        list-style: none;
+        flex-wrap: wrap;
     }
 
     nav a {
-        display: block;
-        padding: 10px;
-        background-color: #FFF7DC;
-        border-bottom: 1px solid #C6C3AB;
+        display: inline-block;
+        padding: 6px 10px;
+        background-color: transparent;
+        border: none;
+        color: #186A47;
     }
 }
-
 @media (max-width: 520px) {
     main {
         margin: var(--main-mobile-offset, 48px) auto 16px;
