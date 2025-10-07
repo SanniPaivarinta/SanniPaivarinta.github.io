@@ -1,16 +1,20 @@
+:root {
+    --footer-height: 96px;
+    --footer-offset: 12px;
+    --footer-margin: 16px;
+}
+
 body {
     font-family: "Baskerville Old Face";
     margin: 0;
     position: relative;
+    padding-bottom: calc(var(--footer-height) + var(--footer-offset));
 }
 
 body::before {
     content: "";
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 0; right: 0; bottom: 0; left: 0;
     background-image: url('Sivuston_taustakuva.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -33,6 +37,17 @@ header {
 header h1 {
     margin: 0;
     font-size: 2rem;
+    font-family: "Monotype Corsiva", cursive;
+    font-weight: 700;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #186A47;
+    cursor: pointer;
 }
 
 nav ul {
@@ -48,6 +63,11 @@ nav a {
     color: #186A47;
     padding: 6px 10px;
     border-radius: 4px;
+    font-family: "Baskerville Old Face";
+}
+
+.mobile-nav {
+    display: flex;
 }
 
 h1, h2, h3 {
@@ -55,25 +75,15 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-nav a,
-.toimintakehote,
-footer,
-figcaption,
-.fa {
-    font-family: "Baskerville Old Face";
-}
-
 main {
     max-width: 760px;
     margin: var(--main-offset, 280px) auto 24px;
     background-color: #639974;
     color: #ffffff;
-    padding: 18px;
-    padding-top: 36px;
+    padding: 36px 18px 60px;
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.28);
     position: relative;
-    padding-bottom: 60px;
 }
 
 main h2, main p {
@@ -81,28 +91,57 @@ main h2, main p {
     color: inherit;
 }
 
-@media (max-width: 520px) {
-    main {
-        margin: var(--main-mobile-offset, 48px) auto 16px;
-        max-width: calc(100% - 32px);
-        padding: 14px;
-        padding-top: 28px;
-        padding-bottom: 48px;
-    }
-    .menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: #186A47;
-    cursor: pointer;
+.toimintakehote {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -80px;
+    display: inline-block;
+    background: #ffffff;
+    color: #639974;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.28);
+    z-index: 2;
+    border: 2px solid rgba(0,0,0,0.06);
+    font-family: "Baskerville Old Face";
 }
 
-.mobile-nav {
-    display: flex;
+footer {
+    position: fixed;
+    left: var(--footer-margin);
+    right: var(--footer-margin);
+    max-width: 900px;
+    margin: 0 auto;
+    bottom: var(--footer-offset);
+    height: var(--footer-height);
+    padding: 12px 24px;
+    text-align: center;
+    color: #ffffff;
+    background: #639974;
+    box-sizing: border-box;
+    z-index: 20;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    font-family: "Baskerville Old Face";
+}
+
+footer a img {
+    width: 28px;
+    height: auto;
+    margin: 0 6px;
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+        gap: 8px;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -122,7 +161,6 @@ main h2, main p {
         gap: 8px;
         padding: 0;
         margin: 0;
-        list-style: none;
     }
 
     nav a {
@@ -133,29 +171,11 @@ main h2, main p {
     }
 }
 
-}
-
-.toimintakehote {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -80px;
-    display: inline-block;
-    background: #ffffff;
-    color: #639974;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.28);
-    z-index: 2;
-    border: 2px solid rgba(0,0,0,0.06);
-}
-
 @media (max-width: 520px) {
     main {
-        padding-bottom: 28px;
-        padding-top: 20px;
+        margin: var(--main-mobile-offset, 48px) auto 16px;
+        max-width: calc(100% - 32px);
+        padding: 20px 14px 28px;
     }
 
     .toimintakehote {
@@ -165,46 +185,13 @@ main h2, main p {
         margin: 16px auto 0 auto;
         text-align: center;
     }
-}
 
-:root {
-    --footer-height: 96px;
-}
-
-footer {
-    position: fixed;
-    left: var(--footer-margin, 16px);
-    right: var(--footer-margin, 16px);
-    max-width: 900px;
-    margin: 0 auto;
-    bottom: var(--footer-offset, 12px);
-    height: var(--footer-height);
-    padding: 12px 24px;
-    text-align: center;
-    color: #ffffff;
-    background: #639974;
-    box-sizing: border-box;
-    z-index: 20;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-body {
-    padding-bottom: calc(var(--footer-height) + var(--footer-offset, 12px));
-}
-
-footer a img {
-    width: 28px;
-    height: auto;
-    margin: 0 6px;
-}
-
-@media (max-width: 520px) {
-    :root { 
+    :root {
         --footer-height: 56px;
         --footer-offset: 8px;
         --footer-margin: 12px;
     }
+
     footer {
         padding: 10px 14px;
         border-radius: 10px;
